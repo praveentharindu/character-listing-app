@@ -101,8 +101,12 @@
     }
   },
   "lint-staged": {
-    "*.{ts,tsx,js,json,css,html}": [
-      "prettier \t--single-quote --write",
+    "*.{js, jsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{tx, tsx}": [
+      "tslint --fix",
       "git add"
     ]
   }
